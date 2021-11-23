@@ -7,13 +7,13 @@ const Game = (props) => {
 
     const clickDog = (e) => {
         const dogId = e.target.id
+
+        console.log(dogId)
     
         // Insert code to update click count for specific dog in dogs
     
         // Insert code to call function to rerender with random cards
     }
-
-    let { idOne, srcOne, idTwo, srcTwo, idThree, srcThree} = ''
 
     const chooseThreeNums = () => {
         let { numOne, numTwo, numThree } = ''
@@ -39,9 +39,11 @@ const Game = (props) => {
 
         return [numOne, numTwo, numThree]
     }
+
+    let { idOne, srcOne, idTwo, srcTwo, idThree, srcThree} = ''
+
     const randomizeBoard = () => {
         const numbers = chooseThreeNums()
-        console.log(numbers)
 
         idOne = numbers[0]
         srcOne = dogs[numbers[0]].source
@@ -52,16 +54,17 @@ const Game = (props) => {
     }
 
     randomizeBoard()
+
     const gameContents = (
         <div id='gameContents'>
-            <div id={idOne} className='card'>
-                <img className='card-pic' src={srcOne}></img>
+            <div className='card'>
+                <img id={idOne} className='card-pic' src={srcOne} onClick={clickDog}></img>
             </div>
-            <div id={idTwo} className='card'>
-                <img className='card-pic' src={srcTwo}></img>
+            <div className='card'>
+                <img id={idTwo} className='card-pic' src={srcTwo} onClick={clickDog}></img>
             </div>
-            <div id={idThree} className='card'>
-                <img className='card-pic' src={srcThree}></img>
+            <div className='card'>
+                <img id={idThree} className='card-pic' src={srcThree} onClick={clickDog}></img>
             </div>
         </div>
     )
