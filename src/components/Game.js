@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import '../stylesheets/Game.css'
 
 const Game = (props) => {
     const { dogs, setDogs, setScore, setGameOver } = props

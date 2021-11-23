@@ -1,0 +1,4 @@
+#gameContents {
+    display: flex;
+    flex-direction: row;
+}
