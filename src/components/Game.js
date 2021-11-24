@@ -4,14 +4,25 @@ import '../stylesheets/Game.css'
 
 const Game = (props) => {
     const { dogs, setDogs, setScore, setGameOver } = props
+    const [gameBoard, setGameBoard] = useState({
+        dogOne: {id: 0, src: dogs[0].source},
+        dogTwo: {id: 1, src: dogs[1].source},
+        dogThree: {id: 2, src: dogs[2].source}
+    })
 
-    const clickDog = (e) => {
-        const dogId = e.target.id
+    const clickDog = async (e) => {
+        const dogId = Number(e.target.id)
+        const dog = dogs[dogId]
 
-        console.log(dogId)
-    
-        // Insert code to update click count for specific dog in dogs
-    
+        if (dog.clicks >= 1) {
+            alert('game over')
+        } else {
+            dog.clicks = 1
+            const firstSlice = await dogs.slice(0, dogId)
+            const secondSlice = await dogs.slice(dogId + 1)
+            setDogs([...firstSlice, dog, ...secondSlice])
+            randomizeBoard()
+        }    
         // Insert code to call function to rerender with random cards
     }
 
@@ -40,31 +51,26 @@ const Game = (props) => {
         return [numOne, numTwo, numThree]
     }
 
-    let { idOne, srcOne, idTwo, srcTwo, idThree, srcThree} = ''
-
     const randomizeBoard = () => {
-        const numbers = chooseThreeNums()
+        let nums = chooseThreeNums()
 
-        idOne = numbers[0]
-        srcOne = dogs[numbers[0]].source
-        idTwo = numbers[1]
-        srcTwo = dogs[numbers[1]].source
-        idThree = numbers[2]
-        srcThree = dogs[numbers[2]].source
+        setGameBoard({
+            dogOne: {id: nums[0], src: dogs[nums[0]].source},
+            dogTwo: {id: nums[1], src: dogs[nums[1]].source},
+            dogThree: {id: nums[2], src: dogs[nums[2]].source},
+        })
     }
-
-    randomizeBoard()
 
     const gameContents = (
         <div id='gameContents'>
             <div className='card'>
-                <img id={idOne} className='card-pic' src={srcOne} onClick={clickDog}></img>
+                <img id={gameBoard.dogOne.id} className='card-pic' src={gameBoard.dogOne.src} onClick={clickDog}></img>
             </div>
             <div className='card'>
-                <img id={idTwo} className='card-pic' src={srcTwo} onClick={clickDog}></img>
+                <img id={gameBoard.dogTwo.id} className='card-pic' src={gameBoard.dogTwo.src} onClick={clickDog}></img>
             </div>
             <div className='card'>
-                <img id={idThree} className='card-pic' src={srcThree} onClick={clickDog}></img>
+                <img id={gameBoard.dogThree.id} className='card-pic' src={gameBoard.dogThree.src} onClick={clickDog}></img>
             </div>
         </div>
     )
