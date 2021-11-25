@@ -21,7 +21,6 @@ import yorkie from '../images/yorkshire-terrier.png'
 
 const App = () => {
   const [score, setScore] = useState(0)
-  const [gameOver, setGameOver] = useState(false)
 
   // Initialize 'dogs' state
   const dogList = [bichonFrise, borderTerrier, cavSpaniel, chihuahua, daschund, frenchie, jackRussell,
@@ -40,6 +39,19 @@ const App = () => {
 
   const [dogs, setDogs] = useState(initDogState)
 
+  // Reset dogs click-count
+  const clearClicks = () => {
+    let newDogArr = []
+
+    for (let i = 0; i < dogs.length; i++) {
+      const dog = dogs[i]
+      dog.clicks = 0
+      newDogArr = [...newDogArr, dog]
+    }
+
+    setDogs(newDogArr)
+  }
+
   return (
     <div id="App">
       <Header score={score} />
@@ -48,7 +60,7 @@ const App = () => {
         score={score}
         setDogs={setDogs}
         setScore={setScore}
-        setGameOver={setGameOver} />
+        clearClicks={clearClicks} />
     </div>
   )
 }

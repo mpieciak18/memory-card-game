@@ -3,7 +3,7 @@ import { useState } from 'react'
 import '../stylesheets/Game.css'
 
 const Game = (props) => {
-    const { dogs, score, setDogs, setScore, setGameOver } = props
+    const { dogs, score, setDogs, setScore, clearClicks } = props
     const [gameBoard, setGameBoard] = useState({
         dogOne: {id: 0, src: dogs[0].source},
         dogTwo: {id: 1, src: dogs[1].source},
@@ -26,6 +26,7 @@ const Game = (props) => {
         if (dog.clicks >= 1) {
             alert('game over')
             resetScore()
+            clearClicks()
         } else {
             dog.clicks = 1
             const firstSlice = await dogs.slice(0, dogId)
