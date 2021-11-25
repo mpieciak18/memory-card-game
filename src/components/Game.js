@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import '../stylesheets/Game.css'
 
 const Game = (props) => {
@@ -23,7 +23,6 @@ const Game = (props) => {
             setDogs([...firstSlice, dog, ...secondSlice])
             randomizeBoard()
         }    
-        // Insert code to call function to rerender with random cards
     }
 
     const chooseThreeNums = () => {
