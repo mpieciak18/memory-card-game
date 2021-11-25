@@ -23,40 +23,22 @@ const App = () => {
   const [gameOver, setGameOver] = useState(false)
 
   // Initialize 'dogs' state
-  // const dogList = [bichonFrise, borderTerrier, cavSpaniel, chihuahua, daschund, frenchie, jackRussell,
-  //   miniSchnauzer, pomeranian, poodle, pug, shihTzu, welshCorgi, westie, yorkie
-  // ]
+  const dogList = [bichonFrise, borderTerrier, cavSpaniel, chihuahua, daschund, frenchie, jackRussell,
+    miniSchnauzer, pomeranian, poodle, pug, shihTzu, welshCorgi, westie, yorkie
+  ]
 
-  // let initDogState = [];
-  // for (let i = 0; i < dogList.length; i++) {
-  //   const newDogObj = {
-  //       clicks: 0,
-  //       id: i,
-  //       source: dogList[i]
-  //   }
-  //   initDogState = [...initDogState, newDogObj]
-  //   console.log('teehee')
-  // }
+  let initDogState = [];
+  for (let i = 0; i < dogList.length; i++) {
+    const newDogObj = {
+        clicks: 0,
+        id: i,
+        source: dogList[i]
+    }
+    initDogState = [...initDogState, newDogObj]
+    console.log('teehee')
+  }
 
-  // const [dogs, setDogs] = useState(initDogState)
-
-  const [dogs, setDogs] = useState([
-    {clicks: 0, id: 0, source: bichonFrise},
-    {clicks: 0, id: 1, source: borderTerrier},
-    {clicks: 0, id: 2, source: cavSpaniel},
-    {clicks: 0, id: 3, source: chihuahua},
-    {clicks: 0, id: 4, source: daschund},
-    {clicks: 0, id: 5, source: frenchie},
-    {clicks: 0, id: 6, source: jackRussell},
-    {clicks: 0, id: 7, source: miniSchnauzer},
-    {clicks: 0, id: 8, source: pomeranian},
-    {clicks: 0, id: 9, source: poodle},
-    {clicks: 0, id: 10, source: pug},
-    {clicks: 0, id: 11, source: shihTzu},
-    {clicks: 0, id: 12, source: welshCorgi},
-    {clicks: 0, id: 13, source: westie},
-    {clicks: 0, id: 14, source: yorkie}
-  ])
+  const [dogs, setDogs] = useState(initDogState)
 
   return (
     <div id="App">
