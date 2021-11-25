@@ -1,5 +1,6 @@
 import React from 'react'
 import Game from '../components/Game.js'
+import Header from '../components/Header.js'
 import { useState, useEffect } from 'react'
 // import './App.css'
 import bichonFrise from '../images/bichon-frise.png'
@@ -35,14 +36,13 @@ const App = () => {
         source: dogList[i]
     }
     initDogState = [...initDogState, newDogObj]
-    console.log('teehee')
   }
 
   const [dogs, setDogs] = useState(initDogState)
 
   return (
     <div id="App">
-      {/* <Header score={score} /> */}
+      <Header score={score} />
       <Game dogs={dogs} setDogs={setDogs} setScore={setScore} setGameOver={setGameOver}/>
     </div>
   )
