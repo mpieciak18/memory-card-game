@@ -3,12 +3,21 @@ import { useState } from 'react'
 import '../stylesheets/Game.css'
 
 const Game = (props) => {
-    const { dogs, setDogs, setScore, setGameOver } = props
+    const { dogs, score, setDogs, setScore, setGameOver } = props
     const [gameBoard, setGameBoard] = useState({
         dogOne: {id: 0, src: dogs[0].source},
         dogTwo: {id: 1, src: dogs[1].source},
         dogThree: {id: 2, src: dogs[2].source}
     })
+
+    const increaseScore = () => {
+        const currScore = score
+        setScore(currScore + 1)
+    }
+
+    const resetScore = () => {
+        setScore(0)
+    }
 
     const clickDog = async (e) => {
         const dogId = Number(e.target.id)
@@ -16,12 +25,14 @@ const Game = (props) => {
 
         if (dog.clicks >= 1) {
             alert('game over')
+            resetScore()
         } else {
             dog.clicks = 1
             const firstSlice = await dogs.slice(0, dogId)
             const secondSlice = await dogs.slice(dogId + 1)
             setDogs([...firstSlice, dog, ...secondSlice])
             randomizeBoard()
+            increaseScore()
         }    
     }
 

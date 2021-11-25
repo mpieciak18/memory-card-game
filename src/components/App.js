@@ -43,7 +43,12 @@ const App = () => {
   return (
     <div id="App">
       <Header score={score} />
-      <Game dogs={dogs} setDogs={setDogs} setScore={setScore} setGameOver={setGameOver}/>
+      <Game 
+        dogs={dogs}
+        score={score}
+        setDogs={setDogs}
+        setScore={setScore}
+        setGameOver={setGameOver} />
     </div>
   )
 }
