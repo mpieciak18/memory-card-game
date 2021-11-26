@@ -1,7 +1,7 @@
 import React from 'react'
 import Game from '../components/Game.js'
 import Header from '../components/Header.js'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 // import './App.css'
 import bichonFrise from '../images/bichon-frise.png'
 import borderTerrier from '../images/border-terrier.png'
@@ -52,15 +52,23 @@ const App = () => {
     setDogs(newDogArr)
   }
 
+  // Update dog in dogs state
+  const updateDog = (dog) => {
+    const firstSlice = dogs.slice(0, dog.id)
+    const secondSlice = dogs.slice(dog.id + 1)
+    setDogs([...firstSlice, dog, ...secondSlice])
+  }
+
   return (
     <div id="App">
       <Header score={score} />
       <Game 
         dogs={dogs}
         score={score}
-        setDogs={setDogs}
         setScore={setScore}
-        clearClicks={clearClicks} />
+        clearClicks={clearClicks}
+        updateDog={updateDog}
+      />
     </div>
   )
 }

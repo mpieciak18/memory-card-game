@@ -1,9 +1,9 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import '../stylesheets/Game.css'
 
 const Game = (props) => {
-    const { dogs, score, setDogs, setScore, clearClicks } = props
+    const { dogs, score, setScore, clearClicks, updateDog} = props
     const [gameBoard, setGameBoard] = useState({
         dogOne: {id: 0, src: dogs[0].source},
         dogTwo: {id: 1, src: dogs[1].source},
@@ -11,31 +11,39 @@ const Game = (props) => {
     })
 
     const increaseScore = () => {
-        const currScore = score
-        setScore(currScore + 1)
+        const newScore = score + 1
+        setScore(newScore)
     }
 
     const resetScore = () => {
         setScore(0)
     }
 
-    const clickDog = async (e) => {
+    const clickDog = (e) => {
         const dogId = Number(e.target.id)
         const dog = dogs[dogId]
 
         if (dog.clicks >= 1) {
             alert('game over')
-            resetScore()
             clearClicks()
+            resetScore()
         } else {
             dog.clicks = 1
-            const firstSlice = await dogs.slice(0, dogId)
-            const secondSlice = await dogs.slice(dogId + 1)
-            setDogs([...firstSlice, dog, ...secondSlice])
-            randomizeBoard()
+            updateDog(dog)
             increaseScore()
         }    
     }
+
+    useEffect(() => {
+        if (score >= 15) {
+            alert('You won the game! Want to play again?')
+            clearClicks()
+            resetScore()
+            randomizeBoard()
+        } else {
+            randomizeBoard()
+        }
+    }, [score])
 
     const chooseThreeNums = () => {
         let { numOne, numTwo, numThree } = ''
@@ -60,6 +68,7 @@ const Game = (props) => {
         numThree = chooseNumThree() 
 
         if (dogs[numOne].clicks == 0 || dogs[numTwo].clicks == 0 || dogs[numThree].clicks == 0) {
+            console.log(dogs[numOne].clicks, dogs[numTwo].clicks, dogs[numThree].clicks)
             return [numOne, numTwo, numThree]
         } else {
             return chooseThreeNums()
