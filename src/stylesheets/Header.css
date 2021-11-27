@@ -28,3 +28,13 @@
 #score {
     margin-left: 10px;
 }
+@media (max-width: 700px) {
+    #directions-box {
+        padding: 10px;
+    }
+}
+@media (min-width: 700px) {
+    #directions-box {
+        padding: 10px 20px;
+    }
+}
