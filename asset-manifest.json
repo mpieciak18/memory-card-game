@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/memory-card-game/static/css/main.802ef2b5.chunk.css",
+    "main.js": "/memory-card-game/static/js/main.bb2d2504.chunk.js",
+    "main.js.map": "/memory-card-game/static/js/main.bb2d2504.chunk.js.map",
+    "runtime-main.js": "/memory-card-game/static/js/runtime-main.6066de8e.js",
+    "runtime-main.js.map": "/memory-card-game/static/js/runtime-main.6066de8e.js.map",
+    "static/js/2.787a9916.chunk.js": "/memory-card-game/static/js/2.787a9916.chunk.js",
+    "static/js/2.787a9916.chunk.js.map": "/memory-card-game/static/js/2.787a9916.chunk.js.map",
+    "index.html": "/memory-card-game/index.html",
+    "static/css/main.802ef2b5.chunk.css.map": "/memory-card-game/static/css/main.802ef2b5.chunk.css.map",
+    "static/js/2.787a9916.chunk.js.LICENSE.txt": "/memory-card-game/static/js/2.787a9916.chunk.js.LICENSE.txt",
+    "static/media/bichon-frise.88372850.png": "/memory-card-game/static/media/bichon-frise.88372850.png",
+    "static/media/border-terrier.432f80e1.png": "/memory-card-game/static/media/border-terrier.432f80e1.png",
+    "static/media/cavalier-king-charles-spaniel.6d37a1ab.png": "/memory-card-game/static/media/cavalier-king-charles-spaniel.6d37a1ab.png",
+    "static/media/chihuahua.d2e19b37.png": "/memory-card-game/static/media/chihuahua.d2e19b37.png",
+    "static/media/daschund.c8de76ce.png": "/memory-card-game/static/media/daschund.c8de76ce.png",
+    "static/media/french-bulldog.909ac454.png": "/memory-card-game/static/media/french-bulldog.909ac454.png",
+    "static/media/jack-russell-terrier.e826ddfa.png": "/memory-card-game/static/media/jack-russell-terrier.e826ddfa.png",
+    "static/media/miniature-schnauzer.0eb22920.png": "/memory-card-game/static/media/miniature-schnauzer.0eb22920.png",
+    "static/media/pomeranian.27d1422e.png": "/memory-card-game/static/media/pomeranian.27d1422e.png",
+    "static/media/poodle.eb5c51f5.png": "/memory-card-game/static/media/poodle.eb5c51f5.png",
+    "static/media/pug.79cc2ba3.png": "/memory-card-game/static/media/pug.79cc2ba3.png",
+    "static/media/shih-tzu.f23eddb2.png": "/memory-card-game/static/media/shih-tzu.f23eddb2.png",
+    "static/media/welsh-corgi.fe654058.png": "/memory-card-game/static/media/welsh-corgi.fe654058.png",
+    "static/media/west-highland-white-terrier.c31defe3.png": "/memory-card-game/static/media/west-highland-white-terrier.c31defe3.png",
+    "static/media/yorkshire-terrier.687b8994.png": "/memory-card-game/static/media/yorkshire-terrier.687b8994.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6066de8e.js",
+    "static/js/2.787a9916.chunk.js",
+    "static/css/main.802ef2b5.chunk.css",
+    "static/js/main.bb2d2504.chunk.js"
+  ]
+}
