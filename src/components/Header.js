@@ -8,7 +8,7 @@ const Header = (props) => {
         <header id='header'>
             <div id='directions-box'>
                 <p>Welcome to the Memory Card Game!</p>
-                <p>Select all 15 breeds without selecting the same dog twice.</p>
+                <p>Select all 15 breeds {'\n'}(without selecting the same dog twice.)</p>
             </div>
             <div id='score-box'>
                 <p>Current Score: </p>

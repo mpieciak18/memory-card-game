@@ -4,15 +4,6 @@
     margin-top: 20px;
     flex-wrap: wrap;
 }
-@media (max-width: 700px) {
-    #gameContents {
-        width: 500px;
-        justify-content: center;
-    }
-    .card-pic {
-        margin-bottom: 20px;
-    }
-}
 .card-pic {
     box-shadow: 0px 20px 20px -15px grey;
     height: 200px;
@@ -20,4 +11,21 @@
     border-radius: 10px;
     margin-left: 10px;
     margin-right: 10px;
+}
+@media (min-width: 700px) {
+    .card-pic {
+        height: 200px;
+        width: 200px;
+    }
+}
+@media (max-width: 700px) {
+    #gameContents {
+        width: 500px;
+        justify-content: center;
+    }
+    .card-pic {
+        margin-bottom: 20px;
+        height: 150px;
+        width: 150px;
+    }
 }
