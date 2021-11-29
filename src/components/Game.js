@@ -68,7 +68,6 @@ const Game = (props) => {
         numThree = chooseNumThree() 
 
         if (dogs[numOne].clicks == 0 || dogs[numTwo].clicks == 0 || dogs[numThree].clicks == 0) {
-            console.log(dogs[numOne].clicks, dogs[numTwo].clicks, dogs[numThree].clicks)
             return [numOne, numTwo, numThree]
         } else {
             return chooseThreeNums()
