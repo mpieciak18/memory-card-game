@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/memory-card-game/static/css/main.61e5b08c.chunk.css",
-    "main.js": "/memory-card-game/static/js/main.f88d534e.chunk.js",
-    "main.js.map": "/memory-card-game/static/js/main.f88d534e.chunk.js.map",
+    "main.css": "/memory-card-game/static/css/main.85f0623f.chunk.css",
+    "main.js": "/memory-card-game/static/js/main.a7b73886.chunk.js",
+    "main.js.map": "/memory-card-game/static/js/main.a7b73886.chunk.js.map",
     "runtime-main.js": "/memory-card-game/static/js/runtime-main.6066de8e.js",
     "runtime-main.js.map": "/memory-card-game/static/js/runtime-main.6066de8e.js.map",
     "static/js/2.787a9916.chunk.js": "/memory-card-game/static/js/2.787a9916.chunk.js",
     "static/js/2.787a9916.chunk.js.map": "/memory-card-game/static/js/2.787a9916.chunk.js.map",
     "index.html": "/memory-card-game/index.html",
-    "static/css/main.61e5b08c.chunk.css.map": "/memory-card-game/static/css/main.61e5b08c.chunk.css.map",
+    "static/css/main.85f0623f.chunk.css.map": "/memory-card-game/static/css/main.85f0623f.chunk.css.map",
     "static/js/2.787a9916.chunk.js.LICENSE.txt": "/memory-card-game/static/js/2.787a9916.chunk.js.LICENSE.txt",
     "static/media/bichon-frise.88372850.png": "/memory-card-game/static/media/bichon-frise.88372850.png",
     "static/media/border-terrier.432f80e1.png": "/memory-card-game/static/media/border-terrier.432f80e1.png",
@@ -16,6 +16,7 @@
     "static/media/chihuahua.d2e19b37.png": "/memory-card-game/static/media/chihuahua.d2e19b37.png",
     "static/media/daschund.c8de76ce.png": "/memory-card-game/static/media/daschund.c8de76ce.png",
     "static/media/french-bulldog.909ac454.png": "/memory-card-game/static/media/french-bulldog.909ac454.png",
+    "static/media/github-logo.80959ebd.png": "/memory-card-game/static/media/github-logo.80959ebd.png",
     "static/media/jack-russell-terrier.e826ddfa.png": "/memory-card-game/static/media/jack-russell-terrier.e826ddfa.png",
     "static/media/miniature-schnauzer.0eb22920.png": "/memory-card-game/static/media/miniature-schnauzer.0eb22920.png",
     "static/media/pomeranian.27d1422e.png": "/memory-card-game/static/media/pomeranian.27d1422e.png",
@@ -29,7 +30,7 @@
   "entrypoints": [
     "static/js/runtime-main.6066de8e.js",
     "static/js/2.787a9916.chunk.js",
-    "static/css/main.61e5b08c.chunk.css",
-    "static/js/main.f88d534e.chunk.js"
+    "static/css/main.85f0623f.chunk.css",
+    "static/js/main.a7b73886.chunk.js"
   ]
 }
