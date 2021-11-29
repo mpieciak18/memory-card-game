@@ -1,6 +1,7 @@
 import React from 'react'
 import Game from '../components/Game.js'
 import Header from '../components/Header.js'
+import Footer from '../components/Footer.js'
 import { useState } from 'react'
 import '../stylesheets/App.css'
 import bichonFrise from '../images/bichon-frise.png'
@@ -69,6 +70,7 @@ const App = () => {
         clearClicks={clearClicks}
         updateDog={updateDog}
       />
+      <Footer />
     </div>
   )
 }
