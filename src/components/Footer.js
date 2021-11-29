@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <div id='footer'>
             <p>Developed by Mark Pieciak</p>
-            <img src={githubLogo} id='github-logo'></img>
+            <img src={githubLogo} id='github-logo' href='https://github.com/mpieciak18/memory-card-game'></img>
         </div>
     )
 }
